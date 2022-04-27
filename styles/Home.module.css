@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background-image: url('./../src/imgs/devu.jpg');
 }
 
 .main {
@@ -106,6 +107,16 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.oprisan {
+  text-shadow: dimgrey;
+  text-decoration-color: deeppink;
+  text-justify: inter-cluster;
+  width: max-content;
+  font-size: 3rem;
+  text-decoration: dotted;
+  color: plum;
 }
 
 @media (max-width: 600px) {
