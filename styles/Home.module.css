@@ -1,8 +1,14 @@
 .container {
   padding: 0 2rem;
   background-image: url('./../src/imgs/devu.jpg');
+  background-size: cover;
 }
 
+.container_ploaie {
+  padding: 0 2rem;
+  background-image: url('./../src/imgs/totdevu.jpg');
+  background-size: cover;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
