@@ -14,11 +14,13 @@ export default function Home() {
   fetch(url)
     .then(res => res.json())
       .then(out => {
+        console.log(out)
         lat = _.get(out, "latitude", null)
         long = _.get(out, "longitude", null)
       })
         .catch(err => error);
-  
+  console.log(lat)
+  console.log(long)
   url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appid=5667d20d425ea4533bdbc1d9e3ec3962"
   fetch(url)
     .then(res => res.json())
@@ -47,7 +49,7 @@ export default function Home() {
 
         <p className={styles.oprisan}>
           {vreme === "Rain" && "Da!"}
-          {vreme != "Extreme" && "AOLEEEEEEEU!"}
+          {vreme === "Extreme" && "AOLEEEEEEEU!"}
           {vreme != "Rain" && "Nu!"}
         </p>
 
