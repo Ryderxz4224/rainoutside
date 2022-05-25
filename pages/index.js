@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+import devu from "./../src/imgs/devu.jpg"
+
 
 export default function Home(props) {
   const [isRaining, setIsRaining] = useState(false);
@@ -60,11 +63,30 @@ export default function Home(props) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Afara ploua?</h1>
+        <Parallax pages={2} style={{ top: '0', left: '0' }}>
+          <ParallaxLayer
+            offset={0}
+            speed={-1}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h1 className={styles.title}>Afara ploua?</h1>
+          </ParallaxLayer>
 
-        <p className={styles.oprisan}>
-          {isRaining ? "Da" : "Nu"}
-        </p>
+          <ParallaxLayer offset={1} speed={2} style={{ backgroundImage: `url(${devu})`, backgroundColor: '#ff6d6d' }} />
+
+          <ParallaxLayer
+            offset={1}
+            speed={0.5}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              color: 'white',
+            }}>
+            <p className={styles.oprisan}>
+              {isRaining ? "Da" : "Nu"}
+            </p>
+          </ParallaxLayer>
+        </Parallax>
       </main>
     </div>
   );

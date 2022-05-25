@@ -49,7 +49,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .title,
@@ -117,12 +117,12 @@
 
 .oprisan {
   text-shadow: dimgrey;
-  text-decoration-color: deeppink;
+  text-decoration-color:deeppink;
   text-justify: inter-cluster;
   width: max-content;
-  font-size: 3rem;
+  font-size: 5rem;
   text-decoration: dotted;
-  color: plum;
+  color: rgb(0, 0, 0);
 
 }
 
